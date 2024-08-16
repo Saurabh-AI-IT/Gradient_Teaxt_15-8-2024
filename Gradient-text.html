@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Text</title>
+
+    <style>
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            font-family: "Inter", "DM Sans", Arial, sans-serif;
+        }
+
+        .title {
+            font-size: 250px;
+            font-weight: 700;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            background-color: #000;
+            margin: 0;
+            
+        }
+
+        .aurora {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            mix-blend-mode: darken;
+            pointer-events: none;
+        }
+
+        .aurora__item {
+            overflow: hidden;
+            position: absolute;
+            width: 60vw;
+            height: 60vw;
+            border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+            filter: blur(20px);
+            mix-blend-mode: overlay;
+        }
+
+        .aurora__item:nth-of-type(1) {
+            background-color: #c7f5db;
+            top: -50%;
+            animation: aurora-1 5s ease-in-out infinite alternate;
+        }
+
+        .aurora__item:nth-of-type(2) {
+            background-color: #f3713a;
+            right: 0;
+            top: 0;
+            animation: aurora-2 5s ease-in-out infinite alternate;
+        }
+
+        .aurora__item:nth-of-type(3) {
+            background-color: #f8ded3;
+            left: 0;
+            bottom: 0;
+            animation: aurora-3 3s ease-in-out infinite alternate;
+        }
+
+        .aurora__item:nth-of-type(4) {
+            background-color: #069d47;
+            right: 0;
+            bottom: -50%;
+            animation: aurora-4 13s ease-in-out infinite alternate;
+        }
+
+        @keyframes aurora-1 {
+            0% {
+                top: 0;
+                right: 0;
+            }
+
+            50% {
+                top: 100%;
+                right: 75%;
+            }
+
+            75% {
+                top: 100%;
+                right: 25%;
+            }
+
+            100% {
+                top: 0;
+                right: 0;
+            }
+        }
+
+        @keyframes aurora-2 {
+            0% {
+                top: -50%;
+                left: 0%;
+            }
+
+            60% {
+                top: 100%;
+                left: 75%;
+            }
+
+            85% {
+                top: 100%;
+                left: 25%;
+            }
+
+            100% {
+                top: -50%;
+                left: 0%;
+            }
+        }
+
+        @keyframes aurora-3 {
+            0% {
+                bottom: 0;
+                left: 0;
+            }
+
+            40% {
+                bottom: 100%;
+                left: 75%;
+            }
+
+            65% {
+                bottom: 60%;
+                left: 50%;
+            }
+
+            100% {
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        @keyframes aurora-4 {
+            0% {
+                bottom: -50%;
+                right: 0;
+            }
+
+            50% {
+                bottom: 0%;
+                right: 40%;
+            }
+
+            90% {
+                bottom: 50%;
+                right: 25%;
+            }
+
+            100% {
+                bottom: -50%;
+                right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <h1 class="title">Happy <br> Independence <br> Day
+            <div class="aurora">
+                <div class="aurora__item">
+                </div>
+                <div class="aurora__item">
+                </div>
+                <div class="aurora__item">
+                </div>
+                <div class="aurora__item">
+                </div>
+            </div>
+        </h1>
+    </div>
+
+</body>
+
+</html>
